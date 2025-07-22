@@ -76,49 +76,56 @@
     transform: translateX(-50%); /* Center it horizontally */
 }
 
-
-/* mobile preview backgroud pic */
+/* mobile preview background pic */
 @media (max-width: 768px) {
-    .content-one{
-    background-color: brown;
-    height: 18%;
-    justify-content: center;
-    width: 100%;
-}
-.photo-background-container{
-   width: auto;
-   height: 30%;
-}
-
-.photo-back{
-    width: 185px;
-    min-width: 169px;
-    max-width: 185px;
-    max-height: 150px;
-    margin: 0; /* Ensure no margin between images */
-}
- #responsive-image {
-      content: url('/Contents/files/mcan.PNG'); /* Path for mobile image */
+    .content-one {
+        background-color: brown;
+        height: 18%;
+        justify-content: center;
+        width: 100%;
     }
-.photo-canvas{
-  
-    background-position: center;
-     background-size: contain;
-    background-repeat: no-repeat;
-    width: 240px;
-    height: 340px;
-    z-index: 10;
-    margin-top: -35%;
-    margin-left: 15%;
-}
-.photo-person {
-    width: 150px;
-    height: 200px;
-    position: absolute; /* Change to absolute for proper positioning */
-    z-index: 15;
-    margin-top: 30%;
-    left: 40%; /* Adjust to position the image in front */
-    transform: translateX(-50%); /* Center it horizontally */
-}
 
+    .photo-background-container {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0%;
+    }
+
+    .photo-back {
+        width: 100%;
+        height: 100px;
+        margin: 0; /* Ensure no margin between images */
+    }
+
+    /* Hide the 5th and 6th images on mobile */
+    .photo-background-container .photo-back:nth-child(n+5) {
+        display: none;
+    }
+
+    #responsive-image {
+        content: url('/Contents/files/mcan.PNG'); /* Path for mobile image */
+    }
+
+    .photo-canvas {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 240px;
+        height: 340px;
+        z-index: 10;
+        margin-top: -35%;
+        margin-left: 15%;
+    }
+
+    .photo-person {
+        width: 150px;
+        height: 200px;
+        position: absolute;
+        z-index: 15;
+        margin-top: 30%;
+        left: 40%;
+        transform: translateX(-50%);
+    }
 }
