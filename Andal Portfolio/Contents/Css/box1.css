@@ -91,8 +91,9 @@
 }
 
 .photo-back{
-    width: 169px;
-    height: 150px;
+    width: 168px;
+    max-width: 169px;
+    max-height: 150px;
     margin: 0; /* Ensure no margin between images */
 }
  #responsive-image {
@@ -108,7 +109,6 @@
     z-index: 10;
     margin-top: -35%;
     margin-left: 15%;
-    position: fixed;
 }
 .photo-person {
     width: 150px;
