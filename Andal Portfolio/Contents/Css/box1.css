@@ -75,6 +75,30 @@
     left: 50%; /* Adjust to position the image in front */
     transform: translateX(-50%); /* Center it horizontally */
 }
+.txt-container{
+    width: 77%;
+    background: rgba(128, 128, 128, 0.5); /* Gray color with 50% transparency */
+    justify-content: center;
+    height: 20vh;
+    margin-top: 10%;
+    margin-left: -2%;
+    position: absolute; /* Use absolute positioning to layer correctly */
+    z-index: 30; /* Ensure it displays in front */
+    top: 10%; /* Adjust the position to control where it appears */
+    padding: 1%;
+}
+.text-quote h1 {
+    margin: 3%;
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Elegant, Vogue-like font */
+    font-weight: 400; /* Regular weight for paragraph text */
+    font-size: 1.5em; /* Adjust size for readability */
+    line-height: 1.6; /* Spacing between lines for a clean look */
+    letter-spacing: 0.5px; /* Slight letter spacing for elegance */
+    color: #fff; /* Dark gray color for readability */
+}
+
+
 
 /* mobile preview background pic */
 @media (max-width: 768px) {
