@@ -1,0 +1,122 @@
+/* Main Content Styling */
+.main-content {
+    margin-left: 260px;  /* Adjust for sidebar width */
+    padding: 20px;
+    flex-direction: column;
+    /* background: red; */
+    width: 75%;
+    height: 400vh;
+    margin-top: -10%;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0; /* Full width for content in mobile */
+        padding: 10px;
+          width: 90%;
+          margin-left: 5px;
+          margin-top: 5%;
+    }
+}
+.content-one{
+   /* background-color: brown; */
+    height: 24%;
+    justify-content: center;
+}
+.photo-background-container{
+    display: flex; /* Use flexbox for a tight layout */
+    flex-wrap: wrap; /* Allow images to wrap to the next line if they overflow */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50%;
+    background: green;
+    justify-content: flex-start;
+    gap: 0; /* Removes any space between the images */
+}
+
+.photo-back {
+    width: 314px;
+    height: 250px;
+    margin: 0; /* Ensure no margin between images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.photo-back:hover {
+    transform: scale(1.1); /* Scale the image up slightly */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+.photo-canvas {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Adjust values as needed */
+    border-radius: 10px; /* Optional: rounds the corners */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 400px;
+    position: relative; /* Ensure the z-index works */
+    z-index: 10;
+    margin-top: -25%;
+    margin-left: 18%;
+    border: none; /* Remove border */
+    outline: none;
+}
+
+#responsive-image {
+    content: url('/Contents/files/dcan.PNG');
+}
+
+.photo-person {
+    width: 250px;
+    height: 300px;
+    position: absolute; /* Change to absolute for proper positioning */
+    z-index: 15;
+   
+    left: 50%; /* Adjust to position the image in front */
+    transform: translateX(-50%); /* Center it horizontally */
+}
+
+
+/* mobile preview backgroud pic */
+@media (max-width: 768px) {
+    .content-one{
+    background-color: brown;
+    height: 18%;
+    justify-content: center;
+    width: 100%;
+}
+.photo-background-container{
+   width: auto;
+   height: 30%;
+}
+
+.photo-back{
+    width: 169px;
+    height: 150px;
+    margin: 0; /* Ensure no margin between images */
+}
+ #responsive-image {
+      content: url('/Contents/files/mcan.PNG'); /* Path for mobile image */
+    }
+.photo-canvas{
+  
+    background-position: center;
+     background-size: contain;
+    background-repeat: no-repeat;
+    width: 240px;
+    height: 340px;
+    z-index: 10;
+    margin-top: -35%;
+    margin-left: 15%;
+}
+.photo-person {
+    width: 150px;
+    height: 200px;
+    position: absolute; /* Change to absolute for proper positioning */
+    z-index: 15;
+    margin-top: 30%;
+    left: 40%; /* Adjust to position the image in front */
+    transform: translateX(-50%); /* Center it horizontally */
+}
+
+}

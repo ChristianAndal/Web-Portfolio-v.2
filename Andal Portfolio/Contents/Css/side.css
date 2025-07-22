@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding-top: 10%;
+    background: #fdf5e6;
+    height: 400%;
+}
+
+/* Sidebar container for desktop view */
+.sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Sidebar width */
+    height: 100%; /* Full height */
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);  /* Optional: Adds shadow to sidebar */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;  /* Adds space on top */
+}
+
+/* Logo styling */
+.logo-container {
+    text-align: center;
+}
+
+.logo-image {
+    height: 80px;  /* Adjust logo height */
+    width: auto;
+    margin-top: 10%;
+}
+
+/* Name styling */
+.name-container {
+    text-align: center;
+    margin-top: 5px;  /* Space between logo and name */
+}
+
+.name {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation styling */
+.navigation-container {
+    margin-bottom: 40%;  /* Adds space between name and navigation */
+    
+    height: 70%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;  /* Stack navigation vertically */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10%;
+}
+
+.nav-list li {
+    margin: 20px 0;  /* Adds space between the menu items */
+    text-align: center;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #696969 ;  /* Adjust link color */
+    font-size: 20px;  /* Adjust font size */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #333;  /* Hover color */
+}
+
+/* Social and Contact Icons */
+
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-icons li a {
+    text-decoration: none;
+    color: #696969 ; /* Default icon color */
+    font-size: 30px; /* Adjust icon size */
+    transition: color 0.3s ease;
+}
+p{
+    color: #333;
+    font-size: 10px;
+    text-align: center;
+}
+
+.social-icons li a:hover {
+    color: #333; /* Hover effect */
+}
+
+/* Mobile Header - Hidden by default */
+.mobile-header {
+    display: flex;
+    justify-content: center; /* Center the name and the hamburger menu */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.name-container-mobile {
+    text-align: left;
+    flex-grow: 1;  /* Ensures the name container takes up available space */
+}
+
+.mobile-header .hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;  /* Adjust this value to move it left as you prefer */
+}
+
+
+/* Mobile Navigation - Hidden by default */
+.mobile-nav {
+    display: none;  /* Initially hidden */
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    position: absolute;
+    top: 60px;  /* Adjust to position the menu below the header */
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav .nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav .nav-list li {
+    margin: 20px 0;
+}
+
+.mobile-nav .nav-list li a {
+    font-size: 18px;
+}
+
+/* Close Button Styling */
+.close-btn {
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Hide sidebar on mobile */
+    .sidebar-container {
+        display: none;  /* Hide sidebar in mobile mode */
+    }
+
+    /* Show mobile header */
+    .mobile-header {
+        display: flex;  /* Show the mobile header on small screens */
+    }
+
+    /* Show mobile navigation when active */
+    .mobile-nav.active {
+        display: block;  /* Show mobile nav when active */
+    }
+}
+
+/* For larger screens, ensure the mobile header is hidden */
+@media (min-width: 769px) {
+    .mobile-header {
+        display: none; /* Hide the mobile header on large screens */
+    }
+}
