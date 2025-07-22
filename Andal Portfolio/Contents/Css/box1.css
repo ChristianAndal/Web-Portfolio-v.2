@@ -108,6 +108,7 @@
     z-index: 10;
     margin-top: -35%;
     margin-left: 15%;
+    position: fixed;
 }
 .photo-person {
     width: 150px;
