@@ -37,7 +37,7 @@
 }
 
 .photo-back {
-    width: 19.5em;
+    width: 21.8em;
     height: 15em;
     margin: 0; /* Ensure no margin between images */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
